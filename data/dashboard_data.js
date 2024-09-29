@@ -1,86 +1,86 @@
 export const json = {
-  completedHtml: "<p style='font-size:24px;'>Thank you for completing the survey! (please wait for analytics to load ...)<p>",
+  completedHtml: "<p style='font-size:24px;'>¡Gracias por completar la encuesta! (espere a que se carguen los análisis...)<p>",
   pages: [{
     name: "page_info",
     elements: [{
       type: "radiogroup",
       name: "organization_type",
-      title: "Which of the following best describes you or your organization?",
+      title: "¿Cuál de las siguientes opciones le describe mejor a usted o a su organización?",
       hasOther: true,
       choices: [{
         value: "ISV",
-        text: "ISV (building commercial/shrink-wrapped software)"
+        text: "ISV (creación de software comercial)"
       }, {
         value: "Consulting",
-        text: "Software consulting firm (providing development services to other organizations)"
+        text: "Empresa de consultoría de software (que brinda servicios de desarrollo a otras organizaciones)"
       }, {
         value: "Custom",
-        text: "Custom software development (as a freelancer/contractor)"
+        text: "Desarrollo de software a medida (como autónomo/contratista)"
       }, {
         value: "In-house",
-        text: "In-house software development"
+        text: "Desarrollo de software interno"
       }, {
         value: "Hobbyist",
-        text: "Hobbyist (developing apps for personal use)"
+        text: "Hobbyist (desarrollo de aplicaciones para uso personal)"
       }],
       colCount: 2
     }, {
       type: "radiogroup",
       name: "developer_count",
       visibleIf: "{organization_type} != 'Hobbyist'",
-      title: "How many software developers are in your organization?",
+      title: "¿Cuántos desarrolladores de software hay en su organización?",
       choices: ["1", "2", "3-5", "6-10", "> 10"]
     }, {
       type: "radiogroup",
       name: "vertical_market",
       visibleIf: "{organization_type} != 'Hobbyist'",
-      title: "Which vertical market does your product serve?",
+      title: "¿A qué mercado vertical sirve su producto?",
       hasOther: true,
       choices: [
-        "Automotive",
-        "Banking",
-        "Consumer",
-        "Education",
-        "Engineering",
-        "Energy",
-        "Fast-moving consumer goods",
-        "Financial",
+        "Automotriz",
+        "Banca",
+        "Consumo",
+        "Educación",
+        "Ingeniería",
+        "Energía",
+        "Bienes de consumo de rápido movimiento",
+        "Financiero",
         "FinTech",
-        "Food and beverage",
-        "Government (federal, state, local)",
-        "Healthcare",
-        "Insurance",
+        "Alimentos y bebidas",
+        "Gobierno (federal, estatal, local)",
+        "Salud",
+        "Seguros",
         "Legal",
-        "Manufacturing",
-        "Media",
-        "Online",
-        "Raw materials",
-        "Real estate",
-        "Religion",
-        "Retail",
-        "Jewelry",
-        "Technology",
-        "Telecommunications",
-        "Transportation (Travel)",
-        "Electronics",
-        "Not-for-profit"
+        "Manufactura",
+        "Medios",
+        "En línea",
+        "Materias primas",
+        "Bienes raíces",
+        "Religión",
+        "Venta al por menor",
+        "Joyería",
+        "Tecnología",
+        "Telecomunicaciones",
+        "Transporte (Viajes)",
+        "Electrónica",
+        "Sin fines de lucro"
       ],
       colCount: 4
     }, {
       type: "radiogroup",
       name: "product_discovering",
-      title: "How did you discover our product?",
+      title: "¿Cómo descubrió nuestro producto?",
       hasOther: true,
       choices: [
-        "Search engine",
+        "Motor de búsqueda",
         "GitHub",
-        "Friend or colleague",
+        "Amigo o colega",
         "Reddit",
         "Medium",
         "Twitter",
         "Facebook"
       ],
-      otherText: "Other",
+      otherText: "Otro",
       colCount: 3
     }]
   }, {
@@ -88,7 +88,7 @@ export const json = {
     elements: [{
       type: "checkbox",
       name: "javascript_frameworks",
-      title: "Which JavaScript frameworks do you use?",
+      title: "¿Qué marcos de JavaScript utilizas?",
       hasOther: true,
       choices: [
         "React",
@@ -104,12 +104,12 @@ export const json = {
         "Mithril",
       ],
       choicesOrder: "asc",
-      otherText: "Other",
+      otherText: "Otro",
       colCount: 3
     }, {
       type: "checkbox",
       name: "backend_language",
-      title: "Which web backend programming languages do you use?",
+      title: "¿Qué lenguajes de programación web backend utilizas?",
       hasOther: true,
       choices: [
         "Java",
@@ -121,7 +121,7 @@ export const json = {
         "Ruby",
       ],
       choicesOrder: "asc",
-      otherText: "Other",
+      otherText: "Otro",
       colCount: 3
     }],
   }, {
@@ -129,55 +129,55 @@ export const json = {
     elements: [{
       type: "radiogroup",
       name: "useproduct",
-      title: "Do you currently use our components?",
+      title: "¿Utiliza actualmente nuestros componentes?",
       isRequired: true,
-      choices: ["Yes", "No"],
+      choices: ["Sí", "No"],
     }, {
       type: "checkbox",
       name: "usecomponents",
       visibleIf: '{useproduct} = "Yes"',
-      title: "Which of our components do you use?",
+      title: "¿Cuál de nuestros componentes utilizas?",
       isRequired: true,
       choices: ["Survey Library (Runner)", "Survey Creator", "Export to PDF", "SurveyJS Analytics"]
     }, {
       type: "checkbox",
       name: "supported_devices",
-      title: "Which device types do you need to support?",
+      title: "¿Qué tipos de dispositivos necesita?",
       isRequired: true,
       choices: [ "Desktop", "Tablet", "Mobile" ],
     }, {
       type: "radiogroup",
       name: "native_mobile_support",
       visibleIf: '{supported_devices} contains "Mobile"',
-      title: "How important for you is native mobile support?",
+      title: "¿Qué importancia tiene para usted el soporte móvil nativo?",
       isRequired: true,
       choices: [{
         value: 1,
-        text: "I am happy with adaptive HTML rendering"
+        text: "Estoy contento con el renderizado HTML adaptativo"
       }, {
         value: 2,
-        text: "Somewhat important, but adaptive HTML rendering is fine"
+        text: "Algo importante, pero el renderizado HTML adaptativo está bien"
       }, {
         value: 3,
-        text: "Very important"
+        text: "Muy importante"
       }, {
         value: 4,
-        text: "Cannot use your components without it"
+        text: "No puede utilizar sus componentes sin él"
       }]
     }, {
       type: "radiogroup",
       name: "native_framework",
       visibleIf: "{native_mobile_support} >= 3",
-      title: "Which framework are you using or going to use for native mobile developlment?",
+      title: "¿Qué framework utilizas o vas a utilizar para el desarrollo móvil nativo?",
       hasOther: true,
       choices: [
         "React Native",
         "NativeScript",
         "Ionic",
         "Xamarin",
-        "Native iOS and Android apps",
+        "Native iOS y Android apps",
       ],
-      otherText: "Other",
+      otherText: "Otro",
       colCount: 2
     }],
   }, {
@@ -185,41 +185,44 @@ export const json = {
       elements: [{
         type: "radiogroup",
         name: "product_alternative",
-        title: "What would you use as an alternative if our product didn't exist?",
+        title: "¿Qué utilizarías como alternativa si nuestro producto no existiera?",
         isRequired: true,
         hasOther: true,
-        choices: ["Popular cloud-based platforms", "Self-developed solution"],
-        otherText: "Other"
+        choices: [
+          "Plataformas populares basadas en la nube",
+          "Solución desarrollada internamente"
+        ],      
+        otherText: "Otro"
       }, {
         type: "text",
         name: "survey_cloud_platform",
         visibleIf: '{product_alternative} = "Popular cloud-based platforms"',
-        title: "What cloud-based platform would you choose?"
+        title: "¿Qué plataforma basada en la nube elegirías?"
       }, {
         type: "radiogroup",
         name: "product_recommend",
-        title: "Have you recommended our product to anyone?",
-        choices: ["Yes", "No"]
+        title: "¿Ha recomendado nuestro producto a alguien?",
+        choices: ["Sí", "No"]
       }]
     }, {
       name: "page_recommend",
       elements: [{
         type: "rating",
         name: "nps_score",
-        title: "How likely are you to recommend our product to a friend or colleague?",
+        title: "¿Qué probabilidades hay de que recomiende nuestro producto a un amigo o colega?",
         isRequired: true,
         rateMin: 0,
         rateMax: 10,
-        minRateDescription: "Most unlikely",
-        maxRateDescription: "Most likely"
+        minRateDescription: "Lo más improbable",
+        maxRateDescription: "Lo más probable"
       }, {
         type: "comment",
         name: "favorite_functionality",
-        title: "What feature do you find most useful in our product?"
+        title: "¿Qué función le parece más útil de nuestro producto?"
       }, {
         type: "comment",
         name: "product_improvement",
-        title: "How could our components be improved to meet your needs better?"
+        title: "¿Cómo podrían mejorarse nuestros componentes para satisfacer mejor sus necesidades?"
       }]
     }
   ]
@@ -251,7 +254,7 @@ const secondResult = {
   developer_count: "3-5",
   vertical_market: "Government (federal, state, local)",
   product_discovering: "Search engine",
-  javascript_frameworks: ["Vue", "jQuery", "other"],
+  javascript_frameworks: ["Vue", "jQuery", "Otro"],
   backend_language: ["Python", "Node.js"],
   useproduct: "Yes",
   usecomponents: ["Survey Library (Runner)"],

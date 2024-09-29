@@ -26,7 +26,7 @@ export default function Header() {
             href={{pathname: "/survey"}}
             prefetch={false}
           >
-            {"Form Library"}
+            {"Biblioteca de formularios"}
           </Link>
           <Link
             className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
@@ -34,7 +34,7 @@ export default function Header() {
             href={{pathname: "/creator"}}
             prefetch={false}
           >
-            {"Survey Creator"}
+            {"Creador de encuestas"}
           </Link>
           <Link
             className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
@@ -50,7 +50,7 @@ export default function Header() {
             href={{pathname: "/tabulator"}}
             prefetch={false}
           >
-            {"Results Table"}
+            {"Tabla de resultados"}
           </Link>
           <Link
             className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
@@ -58,7 +58,7 @@ export default function Header() {
             href={{pathname: "/datatables"}}
             prefetch={false}
           >
-            {"Results Table (IE Support)"}
+            {"Tabla de resultados (compatibilidad con IE)"}
           </Link>
           <Link
             className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
@@ -66,7 +66,7 @@ export default function Header() {
             href={{pathname: "/pdf-export"}}
             prefetch={false}
           >
-            {"PDF Generator"}
+            {"Generador PDF"}
           </Link>
       </nav>
     </header>

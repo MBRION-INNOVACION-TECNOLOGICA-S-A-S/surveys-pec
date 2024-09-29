@@ -1,95 +1,95 @@
 export const json = {
-  title: "Product Feedback Survey",
+  title: "Encuesta de comentarios sobre productos",
   showProgressBar: "top",
   pages: [{
     elements: [{
       type: "matrix",
       name: "Quality",
-      title: "Please indicate if you agree or disagree with the following statements",
+      title: "Por favor indique si está de acuerdo o en desacuerdo con las siguientes afirmaciones",
       columns: [{
         value: 1,
-        text: "Strongly disagree"
+        text: "Totalmente en desacuerdo"
       }, {
         value: 2,
-        text: "Disagree"
+        text: "En desacuerdo"
       }, {
         value: 3,
-        text: "Neutral"
+        text: "Neutro"
       }, {
         value: 4,
-        text: "Agree"
+        text: "De acuerdo"
       }, {
         value: 5,
-        text: "Strongly agree"
+        text: "Totalmente de acuerdo"
       }],
       rows: [{
         value: "affordable",
-        text: "Product is affordable"
+        text: "El producto es económico"
       }, {
         value: "does what it claims",
-        text: "Product does what it claims"
+        text: "El producto hace lo que dice"
       }, {
         value: "better then others",
-        text: "Product is better than other products on the market"
+        text: "El producto es mejor que otros productos en el mercado."
       }, {
         value: "easy to use",
-        text: "Product is easy to use"
+        text: "El producto es fácil de usar."
       }]
     }, {
       type: "rating",
       name: "satisfaction",
-      title: "How satisfied are you with the product?",
-      mininumRateDescription: "Not satisfied",
-      maximumRateDescription: "Completely satisfied"
+      title: "¿Qué tan satisfecho está con el producto?",
+      mininumRateDescription: "Insatisfecho",
+      maximumRateDescription: "Totalmente satisfecho"
     }, {
       type: "rating",
       name: "recommend friends",
       visibleIf: "{satisfaction} > 3",
-      title: "How likely are you to recommend the product to a friend or colleague?",
-      mininumRateDescription: "Won't recommend",
-      maximumRateDescription: "Will recommend"
+      title: "¿Qué probabilidades hay de que recomiende el producto a un amigo o compañero?",
+      mininumRateDescription: "No recomendaría",
+      maximumRateDescription: "Recomendado"
     }, {
       type: "comment",
       name: "suggestions",
-      title: "What would make you more satisfied with the product?"
+      title: "¿Qué le haría estar más satisfecho con el producto?"
     }]
   }, {
     elements: [{
       type: "radiogroup",
       name: "price to competitors",
-      title: "Compared to our competitors, do you feel the product is",
+      title: "En comparación con nuestros competidores, ¿cree que el producto es",
       choices: [
-        "Less expensive",
-        "Priced about the same",
-        "More expensive",
-        "Not sure"
+        "Menos costoso",
+        "Precio más o menos igual",
+        "Más caro",
+        "No estoy seguro"
       ]
     }, {
       type: "radiogroup",
       name: "price",
-      title: "Do you feel our current price is merited by our product?",
+      title: "¿Cree que nuestro producto merece nuestro precio actual?",
       choices: [
-        "correct|Yes, the price is about right",
-        "low|No, the price is too low",
-        "high|No, the price is too high"
+        "correct|Sí, el precio es correcto",
+        "low|No, el precio es demasiado bajo",
+        "high|No, el precio es demasiado alto"
       ]
     }, {
       type: "multipletext",
       name: "pricelimit",
-      title: "What is the... ",
+      title: "¿Cuál es el...?",
       items: [{
         name: "mostamount",
-        title: "Most amount you would pay for a product like ours"
+        title: "La mayor cantidad que pagaría por un producto como el nuestro"
       }, {
         name: "leastamount",
-        title: "The least amount you would feel comfortable paying"
+        title: "La menor cantidad que se sienta cómodo pagando"
       }]
     }]
   }, {
     elements: [{
       type: "text",
       name: "email",
-      title: 'Thank you for taking our survey. Please enter your email address and press the "Submit" button.'
+      title: 'Gracias por responder a nuestra encuesta. Introduzca su dirección de correo electrónico y pulse el botón "Enviar".'
     }]
   }]
 };
