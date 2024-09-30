@@ -10,7 +10,7 @@ import { json as defaultJson } from "../../data/survey_json";
 
 const defaultCreatorOptions: ICreatorOptions = {
   showLogicTab: true,
-  showTranslationTab: true
+  showTranslationTab: false,
 };
 
 export default function SurveyCreatorWidget(props: { json?: Object, options?: ICreatorOptions }) {
@@ -18,6 +18,12 @@ export default function SurveyCreatorWidget(props: { json?: Object, options?: IC
 
   if (!creator) {
     creator = new SurveyCreator(props.options || defaultCreatorOptions);
+
+    creator.toolbox.removeItem("matrixdynamic");
+    creator.toolbox.removeItem("ranking");
+    creator.toolbox.removeItem("multipletext");
+    creator.toolbox.removeItem("panel");
+
     creator.saveSurveyFunc = (no: number, callback: (num: number, status: boolean) => void) => {
       console.log(JSON.stringify(creator?.JSON));
       callback(no, true);
