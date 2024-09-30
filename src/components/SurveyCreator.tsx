@@ -5,17 +5,11 @@ import { ICreatorOptions } from "survey-creator-core";
 import { SurveyCreatorComponent, SurveyCreator } from "survey-creator-react";
 import "survey-core/defaultV2.css";
 import "survey-creator-core/survey-creator-core.css";
-import { surveyLocalization } from "survey-core"; // Importar la localización desde survey-core
 import "survey-core/survey.i18n"; // Importar todos los idiomas disponibles
 import "survey-creator-core/survey-creator-core.i18n"; // Asegurarse de importar la localización del Survey Creator
-
-
 import { editorLocalization } from "survey-creator-core"; 
 
-// Importar los archivos de localización
-import "survey-core/defaultV2.css";
-import "survey-creator-core/survey-creator-core.css";
-import "survey-creator-core/survey-creator-core.i18n"; // Importar todos los idiomas
+// Importar los archivos de localización 
 import "survey-creator-core/i18n/spanish"; // Im
 
 import { json as defaultJson } from "../../data/survey_json";
@@ -38,8 +32,10 @@ export default function SurveyCreatorWidget(props: { json?: Object, options?: IC
     editorLocalization.currentLocale = "es"; // Asegurar que la configuración esté en español
 
     setCreator(surveyCreator);
+    const ratingItem = creator.toolbox.getItemByName("rating");
+    if (ratingItem) ratingItem.title = "NPS";
 /*
-    // Personalizar los labels individualmente
+    // Personalizar los labels individualmente asi se cambian los label de custoom fields
     const radioGroupItem = creator.toolbox.getItemByName("radiogroup");
     if (radioGroupItem) radioGroupItem.title = "Grupo de opciones personalizado";
 
@@ -51,7 +47,7 @@ export default function SurveyCreatorWidget(props: { json?: Object, options?: IC
 
     const dropdownItem = creator.toolbox.getItemByName("dropdown");
     if (dropdownItem) dropdownItem.title = "Lista desplegable personalizada";
-
+ß
     const imagePickerItem = creator.toolbox.getItemByName("imagepicker");
     if (imagePickerItem) imagePickerItem.title = "Selector de imágenes personalizado";
 
