@@ -40,14 +40,16 @@ export const json = {
       name: "satisfaction",
       title: "¿Qué tan satisfecho está con el producto?",
       mininumRateDescription: "Insatisfecho",
-      maximumRateDescription: "Totalmente satisfecho"
+      maximumRateDescription: "Totalmente satisfecho",
+      rateMax: 10 
     }, {
       type: "rating",
       name: "recommend friends",
       visibleIf: "{satisfaction} > 3",
       title: "¿Qué probabilidades hay de que recomiende el producto a un amigo o compañero?",
       mininumRateDescription: "No recomendaría",
-      maximumRateDescription: "Recomendado"
+      maximumRateDescription: "Recomendado",
+      rateMax: 10 
     }, {
       type: "comment",
       name: "suggestions",

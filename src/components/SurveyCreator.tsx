@@ -84,7 +84,7 @@ export default function SurveyCreatorWidget(props: { json?: Object, options?: IC
 
   return (
     <div style={{ height: "80vh", width: "100%" }}>
-      <SurveyCreatorComponent creator={creator} />
+      <SurveyCreatorComponent creator={creator}  style={{ textDecoration: "underline" }}/>
     </div>
   );
 }
